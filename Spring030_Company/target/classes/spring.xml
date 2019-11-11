@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- 
+    		Naming convention here for id is camel case notation.
+    		Class is fully qualified name;
+    		
+    		 -->
+  
+    
+	<bean id="Emp" class="com.lti.Employee">
+	<constructor-arg value="1"></constructor-arg>    <!-- for parameterized constructors -->
+	<constructor-arg value="Prem Dave"></constructor-arg>
+	<constructor-arg value="24000"></constructor-arg>
+	<constructor-arg value="500"></constructor-arg>
+	<property name ="dept1" ref="dept" ></property>   
+	</bean>
+	
+	
+	
+	<bean id="dept" class=" com.lti.Department">
+		<property name="deptid" value="101"></property>
+		<property name="name" value="SAP"></property>
+		<property name="location" value="Mumbai"></property>
+		
+	</bean>
+	
+	
+	</beans>
